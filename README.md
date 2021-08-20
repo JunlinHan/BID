@@ -8,7 +8,7 @@ Blind Image Decomposition is a novel task, which requires separating a superimpo
 DATA61-CSIRO and Australian National University<br>
 Preprint
 
-<img src='imgs/BID.gif' align="right" width=950>
+<img src='imgs/BID.gif' align="left" width=950>
  
 ## Prerequisites
 Python 3.7 or above.

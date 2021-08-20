@@ -78,14 +78,14 @@ Test all cases:
 python test2.py --dataroot ./datasets/image_decom --name biden3 --model biden3 --dataset_mode unaligned3
 ```
 
-**Task II: Real-scenario deraining**
+**Task II: Real-scenario deraining:**
 
 Train:
 ```bash
 python train.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain
 ```
 
-**Task III: Joint shadow/reflection/watermark removal**
+**Task III: Joint shadow/reflection/watermark removal:**
 
 Train:
 ```bash

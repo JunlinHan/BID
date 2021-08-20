@@ -8,6 +8,7 @@ Blind Image Decomposition is a novel task, which requires separating a superimpo
 DATA61-CSIRO and Australian National University<br>
 Preprint
 
+BID demo:
 <img src='imgs/BID.gif' align="left" width=950>
 
 BIDeN (Blind Image Decomposition Networks):

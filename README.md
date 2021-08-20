@@ -7,7 +7,23 @@ Blind Image Decomposition is a novel task, which requires separating a superimpo
 [Junlin Han](https://junlinhan.github.io/), Weihao Li, Pengfei Fang, Chunyi Sun, Jie Hong, Ali Armin, [Lars Petersson](https://people.csiro.au/P/L/Lars-Petersson), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/)<br>
 DATA61-CSIRO and Australian National University<br>
 Preprint
+
+BID demo:
+<img src='imgs/BID.gif' align="left" width=950>
+
+BIDeN (Blind Image Decomposition Networks):
+<img src='imgs/network.png' align="left" width=950>
  
+## Applications of BID 
+
+**Deraining (rain streak, snow, haze, raindrop):**
+<img src='imgs/taskII.png' align="left" width=1100>
+
+<br>
+
+**Joint shadow/reflection/watermark removal:**
+<img src='imgs/taskIII.png' align="left" width=950>
+
 ## Prerequisites
 Python 3.7 or above.
 
@@ -32,13 +48,13 @@ git clone https://github.com/JunlinHan/BID.git
 
 - Download BID datasets: https://drive.google.com/drive/folders/1wUUKTiRAGVvelarhsjmZZ_1iBdBaM6Ka?usp=sharing
 
-  unzi the downloaded datasets, put them inside `./datasets/`.
+  unzip the downloaded datasets, put them inside `./datasets/`.
 
 ### BID Train/Test
 - Detailed instructions are provided at `./models/`.
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 
-**Task I:**
+**Task I: Mixed image decomposition across multiple domains:**
 
 Train (biden n, where n is the max number of source components):
 ```bash
@@ -62,14 +78,14 @@ Test all cases:
 python test2.py --dataroot ./datasets/image_decom --name biden3 --model biden3 --dataset_mode unaligned3
 ```
 
-**Task II:**
+**Task II: Real-scenario deraining:**
 
 Train:
 ```bash
 python train.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain
 ```
 
-**Task III:**
+**Task III: Joint shadow/reflection/watermark removal:**
 
 Train:
 ```bash
@@ -80,7 +96,7 @@ python train.py --dataroot ./datasets/jointremoval_v2 --name task3_v2 --model jo
 
 The test results will be saved to an html file here: `./results/`.
 
-### Apply a pre-trained BIDeN model and evaluate
+### Apply a pre-trained BIDeN model
 We provide our pre-trained BIDeN models at: https://drive.google.com/drive/folders/1UBmdKZXYewJVXHT4dRaat4g8xZ61OyDF?usp=sharing
 
 Download the pre-tained model, unzip it and put it inside ./checkpoints.
@@ -90,9 +106,13 @@ Example usage: Download the dataset of task II (rain) and pretainred model of ta
 python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input B 
 ```
 
+### Evaluation
 For FID score, use [pytorch-fid](https://github.com/mseitzer/pytorch-fid).
 
 For PSNR/SSIM/RMSE, see `./metrics/`.
+
+### Raindrop effect
+See `./raindrop/`.
 
 ### Citation
 If you use our code or our results, please consider citing our paper. Thanks in advance!

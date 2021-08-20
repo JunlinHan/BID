@@ -15,11 +15,10 @@ BIDeN (Blind Image Decomposition Networks):
 <img src='imgs/network.png' align="left" width=950>
  
 ## Applications of BID 
-Deraining (rain streak, snow, haze, raindrop):
+**Deraining (rain streak, snow, haze, raindrop):**
 <img src='imgs/taskII.png' align="left" width=950>
 
-
-Joint shadow/reflection/watermark removal:
+**Joint shadow/reflection/watermark removal:**
 <img src='imgs/taskIII.png' align="left" width=950>
 
 ## Prerequisites

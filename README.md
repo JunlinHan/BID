@@ -17,7 +17,9 @@ BIDeN (Blind Image Decomposition Networks):
 ## Applications of BID 
 **Deraining (rain streak, snow, haze, raindrop):**
 <img src='imgs/taskII.png' align="left" width=950>
+
 <br>
+
 **Joint shadow/reflection/watermark removal:**
 <img src='imgs/taskIII.png' align="left" width=950>
 
@@ -45,7 +47,7 @@ git clone https://github.com/JunlinHan/BID.git
 
 - Download BID datasets: https://drive.google.com/drive/folders/1wUUKTiRAGVvelarhsjmZZ_1iBdBaM6Ka?usp=sharing
 
-  unzi the downloaded datasets, put them inside `./datasets/`.
+  unzip the downloaded datasets, put them inside `./datasets/`.
 
 ### BID Train/Test
 - Detailed instructions are provided at `./models/`.
@@ -93,7 +95,7 @@ python train.py --dataroot ./datasets/jointremoval_v2 --name task3_v2 --model jo
 
 The test results will be saved to an html file here: `./results/`.
 
-### Apply a pre-trained BIDeN model and evaluate
+### Apply a pre-trained BIDeN model
 We provide our pre-trained BIDeN models at: https://drive.google.com/drive/folders/1UBmdKZXYewJVXHT4dRaat4g8xZ61OyDF?usp=sharing
 
 Download the pre-tained model, unzip it and put it inside ./checkpoints.
@@ -103,6 +105,7 @@ Example usage: Download the dataset of task II (rain) and pretainred model of ta
 python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input B 
 ```
 
+### Evaluation
 For FID score, use [pytorch-fid](https://github.com/mseitzer/pytorch-fid).
 
 For PSNR/SSIM/RMSE, see `./metrics/`.

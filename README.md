@@ -54,7 +54,7 @@ git clone https://github.com/JunlinHan/BID.git
 - Detailed instructions are provided at `./models/`.
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 
-**Task I:**
+**Task I: Mixed image decomposition across multiple domains:**
 
 Train (biden n, where n is the max number of source components):
 ```bash
@@ -78,14 +78,14 @@ Test all cases:
 python test2.py --dataroot ./datasets/image_decom --name biden3 --model biden3 --dataset_mode unaligned3
 ```
 
-**Task II:**
+**Task II: Real-scenario deraining**
 
 Train:
 ```bash
 python train.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain
 ```
 
-**Task III:**
+**Task III: Joint shadow/reflection/watermark removal**
 
 Train:
 ```bash

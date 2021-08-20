@@ -9,6 +9,9 @@ DATA61-CSIRO and Australian National University<br>
 Preprint
 
 <img src='imgs/BID.gif' align="left" width=950>
+
+BIDeN (Blind Image Decomposition Networks):
+<img src='imgs/network.png' align="left" width=950>
  
 ## Prerequisites
 Python 3.7 or above.

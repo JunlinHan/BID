@@ -17,7 +17,7 @@ BIDeN (Blind Image Decomposition Networks):
 ## Applications of BID 
 **Deraining (rain streak, snow, haze, raindrop):**
 <img src='imgs/taskII.png' align="left" width=950>
-
+<br>
 **Joint shadow/reflection/watermark removal:**
 <img src='imgs/taskIII.png' align="left" width=950>
 
@@ -106,6 +106,9 @@ python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mo
 For FID score, use [pytorch-fid](https://github.com/mseitzer/pytorch-fid).
 
 For PSNR/SSIM/RMSE, see `./metrics/`.
+
+### Raindrop effect
+See `./raindrop/`.
 
 ### Citation
 If you use our code or our results, please consider citing our paper. Thanks in advance!

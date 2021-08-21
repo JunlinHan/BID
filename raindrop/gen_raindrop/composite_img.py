@@ -30,6 +30,7 @@ def composition_img(img,alpha,position_matrix,length=2):
     img = np.array(img,dtype=np.uint8)
     return img
 
+# Change this to the folder of cityscape images.
 imgs = os.listdir('../boon2')
 alpha_imgs = os.listdir('../gen_raindrop/alpha_textures/alpha/')
 print(alpha_imgs)

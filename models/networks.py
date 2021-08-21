@@ -306,7 +306,7 @@ def define_D(input_nc, ndf, netD, n_layers_D=3, norm='batch', init_type='normal'
         net = NLayerDiscriminator(input_nc, ndf, n_layers_D, norm_layer=norm_layer, no_antialias=no_antialias,)
     elif netD == 'pixel':     # classify if each pixel is real or fake
         net = PixelDiscriminator(input_nc, ndf, norm_layer=norm_layer)
-    elif netD == 'BIDeN_D':     # label
+    elif netD == 'BIDeN_D':     # BIDeN discriminator
         net = BIDEN_Discriminator(input_nc, ndf, n_layers=3, norm_layer=norm_layer, no_antialias=no_antialias,)
     else:
         raise NotImplementedError('Discriminator model name [%s] is not recognized' % netD)
@@ -1014,7 +1014,7 @@ class ResnetGenerator(nn.Module):
 class BIDeN_Encoder(nn.Module):
 
     def __init__(self, input_nc, output_nc, ngf=64, norm_layer=nn.BatchNorm2d, use_dropout=False, n_blocks=6, padding_type='reflect', no_antialias=False, no_antialias_up=False, opt=None):
-        """Construct a Resnet-based generator
+        """Construct a BIDeN Encoder
 
 
         Parameters:
@@ -1112,7 +1112,7 @@ class BIDeN_Encoder(nn.Module):
 
 class BIDeN_Head(nn.Module):
     def __init__(self, input_nc, output_nc, ngf=64, norm_layer=nn.BatchNorm2d, use_dropout=False, n_blocks=6, padding_type='reflect', no_antialias=False, no_antialias_up=False, opt=None):
-        """Construct a Resnet-based generator
+        """Construct a BIDeN Head
 
 
         Parameters:
@@ -1498,16 +1498,14 @@ class NLayerDiscriminator(nn.Module):
         return self.model(input)
 
 class BIDEN_Discriminator(nn.Module):
-    """Defines a PatchGAN discriminator"""
+    """Defines a BIDeN discriminator"""
 
     def __init__(self, input_nc, num=64, n_layers=3, norm_layer=nn.BatchNorm2d, no_antialias=False):
-        """Construct a PatchGAN discriminator
+        """Construct a BIDeN discriminator
+        hard coded
 
         Parameters:
-            input_nc (int)  -- the number of channels in input images
-            ndf (int)       -- the number of filters in the last conv layer
-            n_layers (int)  -- the number of conv layers in the discriminator
-            norm_layer      -- normalization layer
+            num (int)       -- the max number of source components
         """
         super(BIDEN_Discriminator, self).__init__()
         if type(norm_layer) == functools.partial:  # no need to use bias as BatchNorm2d has affine parameters

@@ -221,7 +221,7 @@ class RAINModel(BaseModel):
         self.loss_sum = label_sum
 
     def compute_D_loss(self):
-        """Calculate GAN loss for the discriminator"""
+        """Calculate GAN loss and BCE loss for the discriminator"""
         fake1 = self.fake_A.detach()
         fake2 = self.fake_B.detach()
         fake3 = self.fake_C.detach()
@@ -261,6 +261,7 @@ class RAINModel(BaseModel):
         return self.loss_D
 
     def compute_G_loss(self):
+        """Calculate GAN loss, Ln loss, VGG loss for the generator"""
         # netD(0) for the separation branch.
         pred_fake1 = self.netD(0, self.fake_A)
         pred_fake2 = self.netD(0, self.fake_B)
@@ -323,7 +324,7 @@ class RAINModel(BaseModel):
             e2 = np.transpose(e2, (2, 1, 0))
             position_matrix, alpha = self.get_position_matrix(e2, e1)
             temp = np.transpose(temp, (2, 1, 0))
-            # Fixed rate during testing.
+            # Fixed rate = 0.9 during testing.
             temp = self.composition_img(temp, alpha, position_matrix, rate=0.9)
         self.real_input = torch.from_numpy(temp.reshape(1, 3, self.width, self.width))
         self.real_B = (self.real_B * 2.0 - 1.0).to(self.device)
@@ -356,7 +357,7 @@ class RAINModel(BaseModel):
         img1 = img1 * img2 + A * (1 - img2)
         return img1
 
-    # The following functions are for raindrop, please check more details at raindrop folder.
+    # The following functions are for raindrop, please check more details at ./raindrop.
     def get_position_matrix(self, texture, alpha):
         alpha = cv2.blur(alpha, (5, 5))
         position_matrix = np.mgrid[0:self.width, 0:self.width]

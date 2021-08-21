@@ -143,7 +143,6 @@ class BIDEN3Model(BaseModel):
         while label_sum < 1:
             p = torch.rand(self.opt.max_domain)
             for i in range(self.opt.max_domain):
-                # Note here the probability is actually (1-self.opt.prob).
                 if p[i] < self.opt.prob:
                     self.label[i] = 1
                 else:
@@ -160,7 +159,7 @@ class BIDEN3Model(BaseModel):
 
 
     def compute_D_loss(self):
-        """Calculate GAN loss for the discriminator"""
+        """Calculate GAN loss and BCE loss for the discriminator"""
         fake1 = self.fake_A.detach()
         fake2 = self.fake_B.detach()
         fake3 = self.fake_C.detach()
@@ -180,15 +179,16 @@ class BIDEN3Model(BaseModel):
                            self.criterionGAN(self.pred_real2, True) * self.label[1] + \
                            self.criterionGAN(self.pred_real3, True) * self.label[2]
 
-        # combine loss and calculate gradients
+        # BCE loss, netD(1) for the source prediction branch.
         self.predict_label = self.netD(1,self.real_input).view(self.opt.max_domain)
         self.loss_BCE = self.criterionBCE(self.predict_label, self.label)
+        # combine loss and calculate gradients
         self.loss_D = (self.loss_D_fake + self.loss_D_real) * 0.5 * self.opt.lambda_GAN + self.loss_BCE * self.opt.lambda_BCE
         return self.loss_D
 
     def compute_G_loss(self):
-        """Calculate GAN and NCE loss for the generator"""
-        # First, G(A) should fake the discriminator
+        """Calculate GAN loss, Ln loss, VGG loss for the generator"""
+        # netD(0) for the separation branch.
         pred_fake1 = self.netD(0,self.fake_A)
         pred_fake2 = self.netD(0,self.fake_B)
         pred_fake3 = self.netD(0,self.fake_C)

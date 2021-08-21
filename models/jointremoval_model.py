@@ -205,7 +205,7 @@ class JOINTREMOVALModel(BaseModel):
         self.fake_D = self.netH3(self.fake_all)
 
     def compute_D_loss(self):
-        """Calculate GAN loss for the discriminator"""
+        """Calculate GAN loss and BCE loss for the discriminator"""
         fake1 = self.fake_A.detach()
         fake2 = self.fake_B.detach()
         fake3 = self.fake_D.detach()
@@ -235,6 +235,8 @@ class JOINTREMOVALModel(BaseModel):
         return self.loss_D
 
     def compute_G_loss(self):
+        """Calculate GAN loss, Ln loss, VGG loss for the generator"""
+        # netD(0) for the separation branch.
         pred_fake1 = self.netD(0, self.fake_A)
         pred_fake2 = self.netD(0, self.fake_B)
         pred_fake3 = self.netD(0, self.fake_D)

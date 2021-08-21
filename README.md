@@ -11,7 +11,7 @@ Preprint
 BID demo:
 <img src='imgs/BID.gif' align="left" width=950>
 
-BIDeN (Blind Image Decomposition Networks):
+BIDeN (Blind Image Decomposition Network):
 <img src='imgs/network.png' align="left" width=950>
  
 ## Applications of BID 

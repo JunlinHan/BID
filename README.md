@@ -2,7 +2,8 @@
 
 # Blind Image Decomposition (BID)
 Blind Image Decomposition is a novel task. The task requires separating a superimposed image into constituent underlying images in a blind setting, that is, both the source components involved in mixing as well as the mixing mechanism are unknown.
-We invite the community to explore the novelBID task, including discovering interesting areas of applica-tion, developing novel methods, extending the BID setting,and constructing benchmark datasets.
+
+We invite tyou to explore the novel BID task, including discovering interesting areas of application, developing novel methods, extending the BID setting,and constructing benchmark datasets.
 
 [Blind Image Decomposition](https://arxiv.org/abs/2104.07689)<br>
 [Junlin Han](https://junlinhan.github.io/), Weihao Li, Pengfei Fang, Chunyi Sun, Jie Hong, Ali Armin, [Lars Petersson](https://people.csiro.au/P/L/Lars-Petersson), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/)<br>
@@ -12,7 +13,7 @@ Preprint
 BID demo:
 <img src='imgs/BID.gif' align="left" width=950>
 
-BIDeN (Blind Image Decomposition Network):
+# BIDeN (Blind Image Decomposition Network):
 <img src='imgs/network.png' align="left" width=950>
  
 ## Applications of BID 

@@ -18,6 +18,7 @@ BIDeN (Blind Image Decomposition Network):
 
 **Deraining (rain streak, snow, haze, raindrop):**
 <img src='imgs/taskII.png' align="left" width=1100>
+<br>
 Row 1-6 presents 6 cases of a same scene.  The 6 cases are (1):  rainstreak, (2): rain streak + snow, (3): rain streak + light haze, (4): rain streak + heavy haze, (5): rain streak + moderate haze + raindrop, (6)rain streak + snow + moderate haze + raindrop.
 <br>
 

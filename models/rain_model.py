@@ -44,7 +44,7 @@ class RAINModel(BaseModel):
         parser.add_argument('--prob1', type=float, default=1.0, help='probability of adding shadow (A)')
         parser.add_argument('--prob2', type=float, default=0.5, help='probability of adding reflection, watermark(B,C)')
         parser.add_argument('--haze_intensity', type=int, default=1, help='intensity of haze, only matters for testing. '
-                                                                          '0: light, 1: medium, 2: heavy.')
+                                                                          '0: light, 1: moderate, 2: heavy.')
         opt, _ = parser.parse_known_args()
         return parser
 

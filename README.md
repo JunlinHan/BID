@@ -59,7 +59,7 @@ git clone https://github.com/JunlinHan/BID.git
 
 **Task I: Mixed image decomposition across multiple domains:**
 
-Train (biden n, where n is the max number of source components):
+Train (biden n, where n is the maximum number of source components):
 ```bash
 python train.py --dataroot ./datasets/image_decom --name biden2 --model biden2 --dataset_mode unaligned2
 python train.py --dataroot ./datasets/image_decom --name biden3 --model biden3 --dataset_mode unaligned3

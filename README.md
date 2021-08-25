@@ -2,7 +2,6 @@
 
 # Blind Image Decomposition (BID)
 Blind Image Decomposition is a novel task. The task requires separating a superimposed image into constituent underlying images in a blind setting, that is, both the source components involved in mixing as well as the mixing mechanism are unknown.
-
 We invite the community to explore the novelBID task, including discovering interesting areas of applica-tion, developing novel methods, extending the BID setting,and constructing benchmark datasets.
 
 [Blind Image Decomposition](https://arxiv.org/abs/2104.07689)<br>

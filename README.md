@@ -1,4 +1,4 @@
-[arXiv](https://arxiv.org/abs/2104.07689), [porject page](https://junlinhan.github.io/projects/BID.html)
+[arXiv](https://arxiv.org/abs/2108.11364), [porject page](https://junlinhan.github.io/projects/BID.html)
 
 # Blind Image Decomposition (BID)
 Blind Image Decomposition is a novel task. The task requires separating a superimposed image into constituent underlying images in a blind setting, that is, both the source components involved in mixing as well as the mixing mechanism are unknown.
@@ -123,7 +123,7 @@ If you use our code or our results, please consider citing our paper. Thanks in 
 @inproceedings{han2021bid,
   title={Blind Image Decomposition},
   author={Junlin Han and Weihao Li and Pengfei Fang and Chunyi Sun and Jie Hong and Mohammad Ali Armin and Lars Petersson and Hongdong Li},
-  booktitle={},
+  booktitle={arXiv preprint arXiv:2108.11364},
   year={2021}
 }
 ```

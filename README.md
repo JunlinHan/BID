@@ -5,7 +5,7 @@ Blind Image Decomposition is a novel task. The task requires separating a superi
 
 We invite our community to explore the novel BID task, including discovering interesting areas of application, developing novel methods, extending the BID setting,and constructing benchmark datasets.
 
-[Blind Image Decomposition](https://arxiv.org/abs/2104.07689)<br>
+[Blind Image Decomposition](https://arxiv.org/pdf/2108.11364.pdf)<br>
 [Junlin Han](https://junlinhan.github.io/), Weihao Li, Pengfei Fang, Chunyi Sun, Jie Hong, Ali Armin, [Lars Petersson](https://people.csiro.au/P/L/Lars-Petersson), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/)<br>
 DATA61-CSIRO and Australian National University<br>
 Preprint

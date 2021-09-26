@@ -41,7 +41,7 @@ class RAINModel(BaseModel):
         parser.add_argument('--test_input', type=str, default='B', help='test images, B = rain streak,'
                                                                           ' C = snow, D = haze, E = raindrop.')
         parser.add_argument('--max_domain', type=int, default=4, help='max number of source components.')
-        parser.add_argument('--prob1', type=float, default=1.0, help='probability of adding shadow (A)')
+        parser.add_argument('--prob1', type=float, default=1.0, help='probability of adding rain streak (A)')
         parser.add_argument('--prob2', type=float, default=0.5, help='probability of adding other components')
         parser.add_argument('--haze_intensity', type=int, default=1, help='intensity of haze, only matters for testing. '
                                                                           '0: light, 1: moderate, 2: heavy.')

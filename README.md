@@ -52,6 +52,8 @@ git clone https://github.com/JunlinHan/BID.git
 - Download BID datasets: https://drive.google.com/drive/folders/1wUUKTiRAGVvelarhsjmZZ_1iBdBaM6Ka?usp=sharing
 
   unzip the downloaded datasets, put them inside `./datasets/`.
+  
+- To use our dataset in your method/project, please refer to ./models for detailed usages (biden2-8_model for Task I, rain_model for Task II, jointremoval_model for Task III). The code can be easily transfered. 
 
 ### BID Train/Test
 - Detailed instructions are provided at `./models/`.

@@ -8,7 +8,7 @@ We invite our community to explore the novel BID task, including discovering int
 [Blind Image Decomposition](https://arxiv.org/pdf/2108.11364.pdf)<br>
 [Junlin Han](https://junlinhan.github.io/), Weihao Li, Pengfei Fang, Chunyi Sun, Jie Hong, Ali Armin, [Lars Petersson](https://people.csiro.au/P/L/Lars-Petersson), [Hongdong Li](http://users.cecs.anu.edu.au/~hongdong/)<br>
 DATA61-CSIRO and Australian National University<br>
-Preprint
+European Conference on Computer Vision (ECCV), 2022
 
 BID demo:
 <img src='imgs/BID.gif' align="left" width=950>
@@ -125,8 +125,8 @@ If you use our code or our results, please consider citing our paper. Thanks in 
 @inproceedings{han2021bid,
   title={Blind Image Decomposition},
   author={Junlin Han and Weihao Li and Pengfei Fang and Chunyi Sun and Jie Hong and Mohammad Ali Armin and Lars Petersson and Hongdong Li},
-  booktitle={arXiv preprint arXiv:2108.11364},
-  year={2021}
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2022}
 }
 ```
 

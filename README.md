@@ -1,6 +1,9 @@
 [arXiv](https://arxiv.org/abs/2108.11364), [porject page](https://junlinhan.github.io/projects/BID.html), [paper](https://arxiv.org/pdf/2108.11364.pdf)
 
 # Blind Image Decomposition (BID)
+
+**New**: BID accepted to ECCV 2022. We will update our camera-ready version and code ASAP.
+
 Blind Image Decomposition is a novel task. The task requires separating a superimposed image into constituent underlying images in a blind setting, that is, both the source components involved in mixing as well as the mixing mechanism are unknown.
 
 We invite our community to explore the novel BID task, including discovering interesting areas of application, developing novel methods, extending the BID setting,and constructing benchmark datasets.

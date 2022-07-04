@@ -125,7 +125,7 @@ See `./raindrop/`.
 ### Citation
 If you use our code or our results, please consider citing our paper. Thanks in advance!
 ```
-@inproceedings{han2021bid,
+@inproceedings{han2022bid,
   title={Blind Image Decomposition},
   author={Junlin Han and Weihao Li and Pengfei Fang and Chunyi Sun and Jie Hong and Mohammad Ali Armin and Lars Petersson and Hongdong Li},
   booktitle={European Conference on Computer Vision (ECCV)},

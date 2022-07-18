@@ -114,9 +114,9 @@ We provide our pre-trained BIDeN models at: https://drive.google.com/drive/folde
 
 Download the pre-tained model, unzip it and put it inside ./checkpoints.
 
-Example usage: Download the dataset of task II (rain) and pretainred model of task II (task2). Test the rain streak case.
+Example usage: Download the dataset of task II.A (rain in driving) and pretainred model of task II.A. Test the rain streak case.
 ```bash
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input B 
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input B 
 ```
 
 ### Evaluation

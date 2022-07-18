@@ -11,25 +11,25 @@ from random import choice
 
 
 """ 
-BIDeN model for Task II, real-scenario deraining.
+BIDeN model for Task II.A , real-scenario deraining in driving.
 
 Sample usage:
 Optional visualization:
 python -m visdom.server
 
 Train:
-python train.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain
+python train.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina
 
-For all 6 testing cases, run following:
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input B 
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input BC
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input BD --haze_intensity 0
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input BD --haze_intensity 2
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input BDE --haze_intensity 1
-python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain --test_input BCDE --haze_intensity 1  
+For all 6 testing cases, run following one by one:
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input B 
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input BC
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input BD --haze_intensity 0
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input BD --haze_intensity 2
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input BDE --haze_intensity 1
+python test.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina --test_input BCDE --haze_intensity 1  
 """
 
-class RAINModel(BaseModel):
+class RAINAModel(BaseModel):
     @staticmethod
     def modify_commandline_options(parser, is_train=True):
         """  Configures options specific for BIDeN.

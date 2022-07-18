@@ -6,7 +6,7 @@ import random
 import util.util as util
 
 
-class RAINDataset(BaseDataset):
+class RainaDataset(BaseDataset):
     """
     This dataset class can load unaligned/unpaired datasets.
     """

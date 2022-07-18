@@ -2,8 +2,6 @@
 
 # Blind Image Decomposition (BID)
 
-**New**: BID accepted to ECCV 2022. We will update our camera-ready version and code ASAP.
-
 Blind Image Decomposition is a novel task. The task requires separating a superimposed image into constituent underlying images in a blind setting, that is, both the source components involved in mixing as well as the mixing mechanism are unknown.
 
 We invite our community to explore the novel BID task, including discovering interesting areas of application, developing novel methods, extending the BID setting,and constructing benchmark datasets.
@@ -86,11 +84,18 @@ Test all cases:
 python test2.py --dataroot ./datasets/image_decom --name biden3 --model biden3 --dataset_mode unaligned3
 ```
 
-**Task II: Real-scenario deraining:**
+**Task II.A : Real-scenario deraining in driving:**
 
 Train:
 ```bash
-python train.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mode rain
+python train.py --dataroot ./datasets/raina --name task2a --model raina --dataset_mode raina
+```
+
+**Task II.B : Real-scenario deraining in general:**
+
+Train:
+```bash
+python train.py --dataroot ./datasets/rainb --name task2b --model rainb --dataset_mode rainb
 ```
 
 **Task III: Joint shadow/reflection/watermark removal:**
@@ -117,7 +122,7 @@ python test.py --dataroot ./datasets/rain --name task2 --model rain --dataset_mo
 ### Evaluation
 For FID score, use [pytorch-fid](https://github.com/mseitzer/pytorch-fid).
 
-For PSNR/SSIM/RMSE, see `./metrics/`.
+For PSNR/SSIM/RMSE/NIQE/BRISQUE, see `./metrics/`.
 
 ### Raindrop effect
 See `./raindrop/`.

@@ -6,7 +6,7 @@ import random
 import util.util as util
 
 
-class JOINTREMOVALDataset(BaseDataset):
+class JointremovalDataset(BaseDataset):
     """
     This dataset class can load unaligned/unpaired datasets.
     """

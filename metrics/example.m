@@ -4,7 +4,7 @@ blocksizerow    = 96;
 blocksizecol    = 96;
 blockrowoverlap = 0;
 blockcoloverlap = 0;
-folder1 ='C:\Users\76454\OneDrive\桌面\task2ba\test_latest\images\real_input';
+folder1 ='C:\Users\76454\OneDrive\Desktop\task2ba\test_latest\images\real_input';
 files1 = dir(folder1);
 
 image_num=185; %choose how many images to process, 185/249/1329

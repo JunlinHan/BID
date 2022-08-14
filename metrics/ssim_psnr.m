@@ -9,7 +9,6 @@ files2 = dir(folder2);
 image_num=300; %choose how many images to process, 300 for task I, 500 for task II.
 count_ssim=0;
 count_psnr=0;
-err_count=0;    
 for i=3:image_num+2
 image1=uint8(imread(strcat(folder1,'\',files1(i).name)));
 image2=uint8(imread(strcat(folder2,'\',files2(i).name)));

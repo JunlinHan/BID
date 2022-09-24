@@ -1,4 +1,4 @@
-[arXiv](https://arxiv.org/abs/2108.11364), [Porject page](https://junlinhan.github.io/projects/BID.html), [Paper](https://arxiv.org/pdf/2108.11364.pdf)，[Video](https://youtu.be/wkyJDjUPCkg), [Slide](https://junlinhan.github.io/Files/BID_slide.pptx), [Poster](https://junlinhan.github.io/Files/BID_poster.pdf)
+[arXiv](https://arxiv.org/abs/2108.11364), [Porject page](https://junlinhan.github.io/projects/BID.html), [Paper](https://arxiv.org/pdf/2108.11364.pdf), [Video](https://youtu.be/wkyJDjUPCkg), [Slide](https://junlinhan.github.io/Files/BID_slide.pptx), [Poster](https://junlinhan.github.io/Files/BID_poster.pdf)
 
 # Blind Image Decomposition (BID)
 

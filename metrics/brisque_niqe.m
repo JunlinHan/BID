@@ -1,6 +1,6 @@
 clear all;
 % The folder to your generated/separated images.
-folder1 ='C:\Users\76454\Desktop\results_BID_REAL\biden_BID\snow';
+folder1 ='your_path';
 files1 = dir(folder1);
 
 image_num=1329; %choose how many images to process, 185 for rain streak, 
